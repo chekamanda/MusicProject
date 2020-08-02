@@ -26,7 +26,8 @@ public class Main {
 
 	MyListener ml;
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		Main mainclass = new Main();
 		String filename = mainclass.setup();
 		filename = filename.split("\\.")[0];
@@ -36,27 +37,31 @@ public class Main {
 
 	}
 
-	public String setup() {
+	public String setup()
+	{
 		Minim minim = new Minim(this);
 
-		if (mic) {
+		if (mic)
+		{
 			input = minim.getLineIn(Minim.MONO);
 			ml = new MyListener(this, input);
 			input.addListener(ml);
 			return "From Mic";
-		} else {
+		} else
+		{
 			String filename = getMP3Filename();
 			player = minim.loadFile(filename);
 			player.play();
 			ml = new MyListener(this, player);
 			player.addListener(ml);
-//			player.mute(); //mute music (add on)
+			player.mute(); // mute music (add on)
 			return filename;
 		}
 
 	}
 
-	public void stop() {
+	public void stop()
+	{
 		player.close();
 
 		minim.stop();
@@ -65,36 +70,44 @@ public class Main {
 
 	}
 
-	public void draw() {// this function is never called
+	public void draw()
+	{// this function is never called
 		// System.out.println("NEW DRAW");
 	}
 
-	public String sketchPath(String fileName) {
+	public String sketchPath(String fileName)
+	{
 		// System.out.println("sketchPath: " + fileName);
 		return fileName;
 	}
 
-	public InputStream createInput(String fileName) {
+	public InputStream createInput(String fileName)
+	{
 		// System.out.println("createInput:" + fileName);
 		InputStream in2;
-		try {
+		try
+		{
 			in2 = new FileInputStream(fileName);
 			// System.out.println("InputStream: created! " + fileName);
 			return in2;
-		} catch (Exception ex) {
+		} catch (Exception ex)
+		{
 			System.out.println("Error Catch Triggered: " + ex);
 			in2 = null;
 		}
 		return in2;
 	}
 
-	private static String getMP3Filename() {
+	private static String getMP3Filename()
+	{
 		Frame f = new Frame();
 		FileDialog fd1 = new FileDialog(f, "Select an mp3", FileDialog.LOAD);
 		fd1.setFile("*.mp3");
-		fd1.setFilenameFilter(new FilenameFilter() {
+		fd1.setFilenameFilter(new FilenameFilter()
+		{
 			@Override
-			public boolean accept(File dir, String name) {
+			public boolean accept(File dir, String name)
+			{
 				return (name.endsWith(".mp3"));
 			}
 		});

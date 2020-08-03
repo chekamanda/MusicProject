@@ -1,13 +1,15 @@
 package pkg;
 
 //Shaolin_Dub_-_07_-_Billowing_Smoke 
-//Total  364 Beats (Remaining : 104 Beats)
+//Total  363 Beats (Remaining : 13 Beats) => The End pattern
+// Things to do , boggleEye (eye whites)nikai
 import ryanguru.ColorDisplay;
 
 public class YourCode {
 
 	public static void flappyBird(int c, String color)
 	{
+		// Clear Screen
 		ColorDisplay.setScreenOFF();
 
 		ColorDisplay.pause(200);
@@ -24,15 +26,19 @@ public class YourCode {
 
 		for (int x = 0; x < outlineRow.length; x++)
 		{
+
+			// Selected index to change change color
 			if (x == 7 || x == 8 || x == 9 || x == 10 || x == 11 || x == 20 || x == 21 || x == 22 || x == 23 || x == 24
 					|| x == 25 || x == 38 || x == 39 || x == 40)
 			{
 
+				// If even
 				if (c % 2 == 0)
 				{
 					ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x], color);
 				} else
 				{
+					// odd
 					ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x], "LIGHTGRAY");
 				}
 
@@ -61,6 +67,8 @@ public class YourCode {
 
 			else
 			{
+				// if index not stated in the previous conditions,
+				// it will be printed black
 				ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x], "BLACK");
 
 			}
@@ -70,8 +78,7 @@ public class YourCode {
 
 	public static void shades(int offset, String color)
 	{
-
-		// clear
+		// clear Screen
 		ColorDisplay.setScreenOFF();
 
 		// outline
@@ -103,6 +110,7 @@ public class YourCode {
 
 	public static void Balloon(int offset, String color)
 	{
+		// clear Screen
 		ColorDisplay.setScreenOFF();
 		int[] row = { 1, 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8 }; // outline
 		int[] colm = { 1, 2, 2, 1, 3, 0, 4, 0, 4, 0, 4, 1, 2, 3 }; // outline
@@ -132,6 +140,7 @@ public class YourCode {
 
 	public static void heartFilled(int c)
 	{
+		// Clear Screen
 		ColorDisplay.setScreenOFF();
 		// outline
 		int[] outlineRow = { 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8, 8, 7, 7, 6 };
@@ -237,6 +246,7 @@ public class YourCode {
 
 	public static void cactus(int c, String color)
 	{
+		// clear Screen
 		ColorDisplay.setScreenOFF();
 		int[] row = { 0, 0, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 8,
 				8, 8, 9, 9 };
@@ -337,23 +347,23 @@ public class YourCode {
 
 	public static void rainbowHeart(int c)
 	{
+		// clear Screen
 		ColorDisplay.setScreenOFF();
 
 		// outline
 		int[] outlineRow = { 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8, 8, 7, 7, 6 };
 		int[] outlineCol = { 10, 9, 11, 8, 12, 7, 13, 6, 14, 5, 15, 5, 15, 6, 14, 7, 8, 12, 13, 9, 11, 10 };
 
-		for (int x = 0; x < outlineRow.length; x++)
+		for (int x = 0; x < outlineRow.length; x++) // outline
 		{
 			ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x], "BLACK");
 		}
 
 		// Color
-
 		int[] colorRow = { 2, 3, 4, 5, 3, 4, 5, 6, 4, 5, 6, 5, 6, 7, 6, 7 };
 		int[] colorCol = { 9, 8, 7, 6, 9, 8, 7, 6, 9, 8, 7, 9, 8, 7, 9, 8 };
 
-		if (c % 2 == 0)
+		if (c % 2 == 0) // even
 		{
 			for (int x = 0; x < colorRow.length; x++)
 			{
@@ -375,7 +385,6 @@ public class YourCode {
 					// need to +2 cause 14%4=2, +2 to make 16%4=0
 					ColorDisplay.setPixelColor(colorRow[x], colorCol[x] + (2 * ((x + 2) % 4) + 2), "BLUE");
 				}
-
 			}
 
 		} else
@@ -431,7 +440,7 @@ public class YourCode {
 			ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x], "BLACK");
 
 			// right eye
-			ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x] + 10, "BLACK");
+			ColorDisplay.setPixelColor(outlineRow[x], outlineCol[x] + 10, "BLACK"); // mirrored side
 
 		}
 
@@ -529,7 +538,7 @@ public class YourCode {
 		int[] Fixrow = { 0, 1, 2, 6, 7, 8 };
 		int[] colorRow = { 2, 2, 3, 4, 5, 6, 6, 3, 4, 5 };
 		int[] colorColm = { 6, 8, 8, 8, 8, 8, 9, 9, 9, 9 };
-		for (int i = 0; i <= row.length - 1; i++) // move
+		for (int i = 0; i <= row.length - 1; i++)
 		{
 			if (row[i] + offset <= 9 && 18 - col[i] <= 19 && col[i] <= 19)
 			{
@@ -551,13 +560,13 @@ public class YourCode {
 			if (colorRow[i] + offset <= 9 && 18 - colorColm[i] <= 19)
 			{
 				ColorDisplay.setPixelColor(colorRow[i] + offset, colorColm[i], "RED");
-				ColorDisplay.setPixelColor(colorRow[i] + offset, 18 - colorColm[i], "RED");
+				ColorDisplay.setPixelColor(colorRow[i] + offset, 18 - colorColm[i], "RED"); // mirrored side
 			}
 		}
 
 	}
 
-	public static void bubble(int offset, String color)
+	public static void bubble(int offset, int beat, String color)
 	{
 		ColorDisplay.setScreenOFF();
 
@@ -605,22 +614,22 @@ public class YourCode {
 			{
 				if (row % 2 == 0 && col % 2 == 0)
 				{
-					if (c % 2 == 0)
+					if (c % 2 == 0) // even
 					{
 						ColorDisplay.setPixelColor(row, col, color);
 
-					} else
+					} else // odd
 					{
 						ColorDisplay.setPixelColor(row, col, "BLACK");
 					}
 
 				} else
 				{
-					if (c % 2 == 0)
+					if (c % 2 == 0) // odd
 					{
 						ColorDisplay.setPixelColor(row, col, "BLACK");
 
-					} else
+					} else // odd
 					{
 						ColorDisplay.setPixelColor(row, col, color);
 
@@ -632,16 +641,36 @@ public class YourCode {
 		}
 	}
 
-	public static void theEnd(int c)
+	public static void theEnd(int c, String color)
 	{
+		ColorDisplay.setScreenOFF();
 		int[] BorderRow = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4 };
 		int[] Bordercol = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0, 0, 0, };
+		int[] WordRow = { 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 4, 4, 4, 5, 5, 4, 5, 5, 5, 6, 6, 6, 6, 5,
+				6, 6, 6 };
+		int[] WordCol = { 3, 4, 5, 7, 11, 13, 14, 3, 7, 11, 13, 15, 3, 4, 5, 7, 10, 11, 13, 16, 3, 7, 9, 11, 13, 15, 3,
+				4, 5, 7, 8, 11, 13, 14 };
+
 		for (int i = 0; i < BorderRow.length; i++)
 		{
-			ColorDisplay.setPixelColor(BorderRow[i], Bordercol[i], "BLACK"); //left-bottom
-			ColorDisplay.setPixelColor(5-BorderRow[i]+4, Bordercol[i], "RED"); //left-top
-			ColorDisplay.setPixelColor(BorderRow[i], 19 - Bordercol[i], "WHITE"); // left-bottom
-			ColorDisplay.setPixelColor(5-BorderRow[i]+4,19- Bordercol[i], "RED"); //left-top
+
+			ColorDisplay.setPixelColor(5 - BorderRow[i] + 4, Bordercol[i], color); // left-top
+			ColorDisplay.setPixelColor(BorderRow[i], 19 - Bordercol[i], color); // right-bottom
+			if (c % 2 == 0) // even
+			{
+				ColorDisplay.setPixelColor(BorderRow[i], Bordercol[i], "BLACK"); // left-bottom
+				ColorDisplay.setPixelColor(5 - BorderRow[i] + 4, 19 - Bordercol[i], "BLACK"); // right-top
+			} else // odd
+			{
+				ColorDisplay.setPixelColor(BorderRow[i], Bordercol[i], "DARK_GRAY"); // left-bottom
+				ColorDisplay.setPixelColor(5 - BorderRow[i] + 4, 19 - Bordercol[i], "DARK_GRAY"); // right-top
+			}
+
+		}
+		for (int i = 0; i < WordCol.length; i++)
+		{
+			ColorDisplay.setPixelColor(WordRow[i], WordCol[i], "BLACK"); // "END"
+			ColorDisplay.pause(200);
 
 		}
 	}
@@ -649,23 +678,12 @@ public class YourCode {
 	public static void onBeat(int c) // main void
 	{
 		System.out.println("At beat : " + c);
-//		theEnd(c);
-//		flappyBird(c, c % 20);
-//		shades(c % 4,ColorDisplay.randomColor());
-//		Balloon(c % 11, ColorDisplay.randomColor());
-//		heartFilled(c);
-
-//		bubble(c % 10); 
-//		dots(c, ColorDisplay.randomColor());
-//		rocket(c%10);
-//		cactus(c);
-
 		if (c >= 0 && c <= 10) // Appear 5 times ( odd and even)
 		{
 			pokeball(c % 2, ColorDisplay.randomColor());
 		} else if (c > 10 && c <= 25) // 2 Way
 		{
-			bubble(c % 10, ColorDisplay.randomColor());
+			bubble(c % 10, c, ColorDisplay.randomColor());
 		} else if (c > 25 && c <= 44) // 1 Way (13 beats)
 		{
 			shades(c % 4, ColorDisplay.randomColor());
@@ -718,23 +736,20 @@ public class YourCode {
 			cactus(c, ColorDisplay.randomColor());
 		} else if (c > 219 && c < 230) // 2 Way
 		{
-			bubble(c % 10, ColorDisplay.randomColor());
+			bubble(c % 10, c, ColorDisplay.randomColor());
 		} else if (c >= 230 && c <= 240) // 1 Way
 		{
 			Balloon(c % 11, ColorDisplay.randomColor());
 		} else if (c > 240 && c < 250) // 1 Way
 		{
 			rocket(c % 10);
-		} else if (c >= 250 && c < 270) // 2 Way
+		} else if (c >= 250 && c <= 286) // 2 Way
 		{
-			bubble(c % 10, ColorDisplay.randomColor());
-		} else if (c >= 270 && c <= 285)
+			bubble(c % 10, c, ColorDisplay.randomColor());
+		} else if (c > 286 && c <= 296)
 		{
 			pixel(c);
-		} else if (c > 285 && c <= 295)
-		{
-			heartFilled(c);
-		} else if (c >= 296 && c < 300)
+		} else if (c > 296 && c < 300)
 		{
 			Balloon(c % 11, ColorDisplay.randomColor());
 		} else if (c >= 300 && c <= 310)
@@ -746,21 +761,23 @@ public class YourCode {
 		} else if (c > 315 && c <= 335)
 		{
 			shades(c % 4, ColorDisplay.randomColor());
-		} else if (c > 315 && c <= 325)
-		{
-			rainbowHeart(c);
-		} else if (c > 325 && c <= 340)
+		} else if (c > 335 && c <= 340)
 		{
 			flappyBird(c, ColorDisplay.randomColor());
 		} else if (c > 340 && c <= 330)
 		{
 			Balloon(c % 11, ColorDisplay.randomColor());
-		} else if (c > 330 && c < 340)
+		} else if (c > 330 && c <= 340)
 		{
 			rocket(c % 10);
-//		} else if (c > 340 && c < 364)
-//		{
-//			end(c % 10);
+		} else if (c > 340 && c <= 350)
+		{
+			ColorDisplay.setScreenOFF();
+			boggleEyed(c);
+
+		} else if (c > 350 && c <= 365)
+		{
+			theEnd(c % 10, ColorDisplay.randomColor());
 		}
 
 	}

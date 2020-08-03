@@ -23,7 +23,7 @@ public class ColorDisplay {
 	private static int STD_ROW_LABEL_WIDTH = 70, STD_COL_LABEL_HEIGHT = 70;
 	private static int ROW_LABEL_WIDTH, COL_LABEL_HEIGHT;
 
-	private static String[] color = { "GREEN", "PINK", "ORANGE", "BLUE", "YELLOW" };
+	private static String[] color = { "GREEN", "PINK", "ORANGE", "BLUE", "YELLOW", "RED" };
 
 	public static void openDisplay(String title)
 	{
@@ -119,7 +119,7 @@ public class ColorDisplay {
 			result = Color.yellow;
 		else if (color.equals("DARK_GRAY"))// addon
 			result = Color.darkGray;
-		else if (color.equals("LIGHTGRAY"))
+		else if (color.equals("LIGHTGRAY"))// addon
 			result = Color.lightGray;
 
 		else

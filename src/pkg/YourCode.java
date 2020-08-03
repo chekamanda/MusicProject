@@ -2,7 +2,11 @@ package pkg;
 
 //Shaolin_Dub_-_07_-_Billowing_Smoke 
 //Total  363 Beats (Remaining : 13 Beats) => The End pattern
+<<<<<<< HEAD
 // Things to do , boggleEye (eye whites)nikai
+=======
+// Things to do , boggleEye (eye whites)
+>>>>>>> 3adf37ddddc356f17cbfdc139a6474aad9f9626d
 import ryanguru.ColorDisplay;
 
 public class YourCode {
@@ -601,8 +605,11 @@ public class YourCode {
 				ColorDisplay.setPixelColor(colorRow[i], colorCol[i], "WHITE");
 			}
 		}
+		if (beat > 10 && beat <= 25)
+		{
 
-		du(offset); // calling the method du+offset
+			du(offset); // calling the method du+offset
+		}
 
 	}
 
@@ -646,10 +653,17 @@ public class YourCode {
 		ColorDisplay.setScreenOFF();
 		int[] BorderRow = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4 };
 		int[] Bordercol = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0, 0, 0, };
+<<<<<<< HEAD
 		int[] WordRow = { 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 4, 4, 4, 5, 5, 4, 5, 5, 5, 6, 6, 6, 6, 5,
 				6, 6, 6 };
 		int[] WordCol = { 3, 4, 5, 7, 11, 13, 14, 3, 7, 11, 13, 15, 3, 4, 5, 7, 10, 11, 13, 16, 3, 7, 9, 11, 13, 15, 3,
 				4, 5, 7, 8, 11, 13, 14 };
+=======
+		int[] WordRow = { 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6,
+				6, 6, 6, 6 };
+		int[] WordCol = { 3, 4, 5, 7, 11, 13, 14, 3, 7, 10, 11, 13, 15, 3, 4, 5, 7, 10, 11, 13, 16, 3, 7, 9, 11, 13, 15,
+				3, 4, 5, 7, 8, 11, 13, 14 };
+>>>>>>> 3adf37ddddc356f17cbfdc139a6474aad9f9626d
 
 		for (int i = 0; i < BorderRow.length; i++)
 		{
@@ -678,6 +692,20 @@ public class YourCode {
 	public static void onBeat(int c) // main void
 	{
 		System.out.println("At beat : " + c);
+<<<<<<< HEAD
+=======
+//		theEnd(c, ColorDisplay.randomColor());
+//		flappyBird(c, c % 20);
+//		shades(c % 4,ColorDisplay.randomColor());
+//		Balloon(c % 11, ColorDisplay.randomColor());
+//		heartFilled(c);
+
+//		bubble(c % 10); 
+//		dots(c, ColorDisplay.randomColor());
+//		rocket(c%10);
+//		cactus(c);
+
+>>>>>>> 3adf37ddddc356f17cbfdc139a6474aad9f9626d
 		if (c >= 0 && c <= 10) // Appear 5 times ( odd and even)
 		{
 			pokeball(c % 2, ColorDisplay.randomColor());
@@ -743,10 +771,17 @@ public class YourCode {
 		} else if (c > 240 && c < 250) // 1 Way
 		{
 			rocket(c % 10);
+<<<<<<< HEAD
 		} else if (c >= 250 && c <= 286) // 2 Way
 		{
 			bubble(c % 10, c, ColorDisplay.randomColor());
 		} else if (c > 286 && c <= 296)
+=======
+		} else if (c >= 250 && c < 286) // 2 Way
+		{
+			bubble(c % 10, c, ColorDisplay.randomColor());
+		} else if (c >= 289 && c <= 285)
+>>>>>>> 3adf37ddddc356f17cbfdc139a6474aad9f9626d
 		{
 			pixel(c);
 		} else if (c > 296 && c < 300)
@@ -770,6 +805,7 @@ public class YourCode {
 		} else if (c > 330 && c <= 340)
 		{
 			rocket(c % 10);
+<<<<<<< HEAD
 		} else if (c > 340 && c <= 350)
 		{
 			ColorDisplay.setScreenOFF();
@@ -778,6 +814,15 @@ public class YourCode {
 		} else if (c > 350 && c <= 365)
 		{
 			theEnd(c % 10, ColorDisplay.randomColor());
+=======
+		} else if (c > 340 && c < 350)
+		{
+			bubble(c % 10, c, ColorDisplay.randomColor());
+
+//		} else if (c > 350 && c < 362)
+//		{
+//			theEnd(c % 10, ColorDisplay.randomColor());
+>>>>>>> 3adf37ddddc356f17cbfdc139a6474aad9f9626d
 		}
 
 	}

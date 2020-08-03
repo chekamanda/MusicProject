@@ -54,7 +54,11 @@ public class Main {
 			player.play();
 			ml = new MyListener(this, player);
 			player.addListener(ml);
+<<<<<<< HEAD
 //			player.mute(); // mute music (add on)
+=======
+			player.mute(); // mute music (add on)
+>>>>>>> 3adf37ddddc356f17cbfdc139a6474aad9f9626d
 			return filename;
 		}
 
